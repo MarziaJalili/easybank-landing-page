@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* add the font */
+* {
+  font-family: "Public Sans", sans-serif;
+}
+
 @theme {
   /* ## Colors */
 

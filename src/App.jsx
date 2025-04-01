@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <main className="bg-Very-Light-Gray">
+      <main>
         <Cta />
         <Features />
         <Articles />
