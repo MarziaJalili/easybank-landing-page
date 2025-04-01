@@ -1,3 +1,4 @@
+import RequestButton from "../RequestButton";
 import Nav from "./Nav";
 import { useState } from "react";
 
@@ -41,14 +42,7 @@ const Header = () => {
       </button>
 
       {/* Request Invite button */}
-      <a>
-        <button
-          href="#"
-          className="dark-btn pt-2 pb-3 cursor-pointer px-6 font-bold text-white bg-gradient-to-r  from-Lime-Green to-Bright-Cyan bg-Bright-Red rounded-full baseline hover:bg-Bright-Red-Sup-Light duration-300 hidden text-bold hover:opacity-70 transition-opacity md:block"
-        >
-          Request Invite
-        </button>
-      </a>
+      <RequestButton show={"hidden md:block"} />
     </header>
   );
 };
