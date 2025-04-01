@@ -28,24 +28,35 @@ const featureData = [
 const Features = () => {
   // generate features...
   const features = featureData.map((item) => (
-    <li key={item.heading} className="flex flex-col space-y-6 items-center">
+    <li
+      key={item.heading}
+      className="flex flex-col space-y-6 items-center md:items-start md:w-[275px] shrink-0"
+    >
       <img src={item.img} alt="feature image" />
-      <h3 className="text-Dark-Blue text-2xl font-light">{item.heading}</h3>
-      <p className="text-Grayish-Blue">{item.paragraph}</p>
+      <h3 className="text-Dark-Blue text-2xl font-light xl:text-3xl">
+        {item.heading}
+      </h3>
+      <p className="text-Grayish-Blue max-md:w-3/4 xl:text-lg">
+        {item.paragraph}
+      </p>
     </li>
   ));
 
   return (
-    <section className="features bg-Light-Grayish-Blue flex flex-col  text-center items-center space-y-6 px-6 py-15 mt-20">
-      <h2 className="text-Dark-Blue text-3xl font-light">
-        Why choose Easybank?
-      </h2>
-      <p className="text-Grayish-Blue mb-10">
-        We leverage Open Banking to turn your bank account into your financial
-        hub. Control your finances like never before.
-      </p>
+    <section className="features bg-Light-Grayish-Blue flex flex-col  text-center items-center space-y-6 px-6 py-15 mt-20 md:items-start md:text-left md:px-40 ">
+      <div className="flex flex-col space-y-6 md:max-w-xl">
+        <h2 className="text-Dark-Blue text-3xl font-light md:text-4xl">
+          Why choose Easybank?
+        </h2>
+        <p className="text-Grayish-Blue mb-10 md:text-lg">
+          We leverage Open Banking to turn your bank account into your financial
+          hub. Control your finances like never before.
+        </p>
+      </div>
 
-      <ul className="flex flex-col space-y-15">{features}</ul>
+      <ul className="flex  w-full flex-col space-y-15 md:flex-row  md:items-center xl:space-y-0 flex-wrap  md:justify-between">
+        {features}
+      </ul>
     </section>
   );
 };
