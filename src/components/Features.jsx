@@ -30,20 +30,20 @@ const Features = () => {
   const features = featureData.map((item) => (
     <li
       key={item.heading}
-      className="flex flex-col space-y-6 items-center md:items-start md:w-[275px] shrink-0"
+      className="flex flex-col space-y-6 items-center lg:items-start md:max-w-sm lg:w-[280px] shrink-0"
     >
-      <img src={item.img} alt="feature image" />
+      <img src={item.img} alt="feature image" aria-hidden="true" />
       <h3 className="text-Dark-Blue text-2xl font-light xl:text-3xl">
         {item.heading}
       </h3>
-      <p className="text-Grayish-Blue max-md:w-3/4 xl:text-lg">
+      <p className="text-Grayish-Blue max-sm:w-auto max-md:w-3/4 xl:text-lg">
         {item.paragraph}
       </p>
     </li>
   ));
 
   return (
-    <section className="features bg-Light-Grayish-Blue flex flex-col  text-center items-center space-y-6 px-6 py-15 mt-20 md:items-start md:text-left md:px-40 ">
+    <section className="features bg-Light-Grayish-Blue flex flex-col  text-center items-center space-y-6 px-6 py-20 mt-20 lg:items-start lg:text-left lg:px-40 lg:py-30 md:mt-0 ">
       <div className="flex flex-col space-y-6 md:max-w-xl">
         <h2 className="text-Dark-Blue text-3xl font-light md:text-4xl">
           Why choose Easybank?
@@ -54,7 +54,7 @@ const Features = () => {
         </p>
       </div>
 
-      <ul className="flex  w-full flex-col space-y-15 md:flex-row  md:items-center xl:space-y-0 flex-wrap  md:justify-between">
+      <ul className="flex  w-full flex-col space-y-15 lg:flex-row items-center xl:space-y-0  lg:justify-between lg:items-start lg:flex-wrap">
         {features}
       </ul>
     </section>
