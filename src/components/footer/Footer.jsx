@@ -1,9 +1,10 @@
 import SocialIcons from "./SocialIcons";
 import RequestButton from "../RequestButton";
+
 const Footer = () => {
   return (
-    <footer className="p-10 bg-Dark-Blue flex flex-col items-center justify-center space-y-8 md:flex-row md:justify-between md:px-10 lg:px-40 md:pb-2">
-      <div className="flex flex-col items-center space-y-8 ">
+    <footer className="p-10 bg-Dark-Blue flex flex-col items-center justify-center space-y-8 md:flex-row md:justify-between md:px-10 lg:px-40">
+      <div className="box flex flex-col items-center space-y-8 ">
         <img src="./light-logo.svg" alt="logo-image" />
         <SocialIcons />
       </div>

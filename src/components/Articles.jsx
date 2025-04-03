@@ -1,5 +1,10 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const articleData = [
   {
+    id: "one",
     img: "./image-currency.jpg",
     author: "Claire Robinson",
     heading: "Receive money in any currency with no fees",
@@ -7,6 +12,7 @@ const articleData = [
       "The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single...",
   },
   {
+    id: "two",
     img: "./image-restaurant.jpg",
     author: "Wilson Hutton",
     heading: "Treat yourself without worrying about money",
@@ -14,6 +20,7 @@ const articleData = [
       "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you...",
   },
   {
+    id: "three",
     img: "./image-plane.jpg",
     heading: "Talk your Easybank card wherever you go",
     author: "Wilson Hutton",
@@ -21,6 +28,7 @@ const articleData = [
       "We want you to enjoy your travels.This is why we don't charge any fees on purchases while you're abroad. We'll even show you...",
   },
   {
+    id: "four",
     img: "./image-confetti.jpg",
     author: "Claire Robinson",
     heading: "Our invite-only Beta accounts are now live!",
@@ -30,11 +38,60 @@ const articleData = [
 ];
 
 const Features = () => {
+  // animations, bro!
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // the "a" after the class names stands for articles...
+    gsap.to(".onea", {
+      scrollTrigger: {
+        trigger: ".onea",
+        toggleActions: "restart none none none",
+      },
+      x: 0,
+      duration: 1,
+      ease: "in",
+    });
+
+    gsap.to(".twoa", {
+      scrollTrigger: {
+        trigger: ".twoa",
+        toggleActions: "restart none none none",
+      },
+      x: 0,
+      delay: 0.2,
+      duration: 1,
+      ease: "in",
+    });
+
+    gsap.to(".threea", {
+      scrollTrigger: {
+        trigger: ".threea",
+        toggleActions: "restart none none none",
+      },
+      x: 0,
+      delay: 0.4,
+      duration: 1,
+      ease: "in",
+    });
+
+    gsap.to(".foura", {
+      scrollTrigger: {
+        trigger: ".foura",
+        toggleActions: "restart none none none",
+      },
+      x: 0,
+      delay: 0.6,
+      duration: 1,
+      ease: "in",
+    });
+  });
+
   // generate features...
   const articles = articleData.map((item, index) => (
     <li
       key={item.heading}
-      className={`flex min-h-[517px] flex-col md:w-[290px] shrink-0 shadow-[0_35px_35px_rgba(243,244,246,1)] rounded-md`}
+      className={`-translate-x-full ${item.id}a flex min-h-[517px] flex-col md:w-[290px] shrink-0 shadow-[0_35px_35px_rgba(243,244,246,1)] rounded-md`}
     >
       <img
         className={`rounded-tr-md rounded-tl-md ${
@@ -53,7 +110,7 @@ const Features = () => {
 
   return (
     <section className="features flex flex-col  items-center space-y-6 px-6 py-20 lg:items-start md:px-40 ">
-      <h2 className="text-Dark-Blue mb-10 text-3xl font-light md:text-4xl ">
+      <h2 className="onea -translate-x-full text-Dark-Blue mb-10 text-3xl font-light md:text-4xl ">
         Latest Articles
       </h2>
 
