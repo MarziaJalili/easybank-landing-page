@@ -31,13 +31,15 @@ const articleData = [
 
 const Features = () => {
   // generate features...
-  const articles = articleData.map((item) => (
+  const articles = articleData.map((item, index) => (
     <li
       key={item.heading}
-      className="flex flex-col md:w-[290px] shrink-0 shadow-[35px_35px_35px_rgba(243,244,246,1)] s rounded-lg"
+      className={`flex min-h-[517px] flex-col md:w-[290px] shrink-0 shadow-[0_35px_35px_rgba(243,244,246,1)] rounded-md`}
     >
       <img
-        className="rounded-tr-lg rounded-tl-lg"
+        className={`rounded-tr-md rounded-tl-md ${
+          index === 0 ? "max-h-[194px]" : ""
+        } `}
         src={item.img}
         alt="feature image"
       />
@@ -55,7 +57,7 @@ const Features = () => {
         Latest Articles
       </h2>
 
-      <ul className="flex  w-full flex-col space-y-15 lg:flex-row items-center xl:space-y-0  lg:justify-between lg:items-start lg:flex-wrap">
+      <ul className="flex w-full flex-col space-y-15 lg:flex-row items-center xl:space-y-10  lg:justify-between lg:items-start lg:flex-wrap">
         {articles}
       </ul>
     </section>
