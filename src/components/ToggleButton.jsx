@@ -12,7 +12,7 @@ const ToggleButton = ({ darkMode, setDarkMode }) => {
   return (
     <button
       aria-label="Toggles the dark and light mood"
-      className="mood absolute -top-10 cursor-pointer left-6 lg:left-[15%]"
+      className="mood absolute -top-10 cursor-pointer left-5 lg:left-[15%]"
       onClick={changeMode}
     >
       <svg

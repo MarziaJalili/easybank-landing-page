@@ -11,10 +11,12 @@ const App = () => {
   return (
     <>
       {/* the scroll progress bar */}
-      <div className="progressbar z-100 fixed top-0 right-0 w-[10px] h-[100%] bg-linear-to-t from-Lime-Green to-Bright-Cyan"></div>
-      <div className="scroll-path z-100 fixed top-0 right-0 w-[10px] h-[10px] bg-Bright-Cyan"></div>
+
+      <div className="progressbar z-100 fixed top-16 right-0 w-[10px] h-[100%] bg-linear-to-t from-Lime-Green to-Bright-Cyan"></div>
+      <div className="scroll-path z-100 fixed top-16 right-0 w-[10px] h-[10px] bg-Bright-Cyan"></div>
 
       {/* main content of the page */}
+
       <Header darkMode={darkMode} />
       <main>
         <Cta darkMode={darkMode} setDarkMode={setDarkMode} />
