@@ -9,7 +9,7 @@ const Footer = () => {
         <SocialIcons />
       </div>
 
-      <ul className="flex flex-col items-center space-y-3 text-Light-Grayish-Blue md:space-y-0 md:flex-row md:space-x-12">
+      <ul className="flex flex-col items-center space-y-3 text-Light-Grayish-Blue md:space-y-0 md:flex-row md:space-x-12 lg:space-x-32">
         <li>
           <ul className="flex flex-col items-center space-y-3 md:items-start">
             <li>

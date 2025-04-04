@@ -15,7 +15,7 @@ const App = () => {
 
   if (progress) {
     window.onscroll = () => {
-      const progressHeight = (window.pageYOffset / totalHeight) * 300;
+      const progressHeight = (window.pageYOffset / totalHeight) * 100;
       progress.style.height = progressHeight + "%";
     };
   }
