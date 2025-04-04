@@ -15,7 +15,7 @@ const App = () => {
 
   if (progress) {
     window.onscroll = () => {
-      const progressHeight = (window.pageYOffset / totalHeight) * 100;
+      const progressHeight = (window.pageYOffset / totalHeight) * 300;
       progress.style.height = progressHeight + "%";
     };
   }
@@ -23,7 +23,7 @@ const App = () => {
     <>
       {/* the scroll progress bar */}
 
-      <div className="progress-bar rounded-full z-100 fixed top-0 right-0 w-[6px] bg-linear-to-t h-full from-Lime-Green to-Bright-Cyan"></div>
+      <div className="progress-bar rounded-full z-100 fixed top-0 right-0 w-[6px] bg-linear-to-t from-Lime-Green to-Bright-Cyan"></div>
       <div className="scroll-path rounded-full z-100 fixed top-0 right-0 w-[6px] h-[10px] bg-Bright-Cyan"></div>
 
       {/* main content of the page */}

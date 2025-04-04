@@ -158,6 +158,14 @@ body.dark {
     background-color: #d1fab6;
   }
 
+  .image-bg {
+    background-image: url("../public/dark-bg-intro-mobile.svg");
+
+    @media (min-width: 64rem) {
+      background-image: url("../public/dark-bg-intro-desktop.svg");
+    }
+  }
+
   h1,
   h2,
   h3 {

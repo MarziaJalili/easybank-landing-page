@@ -11,18 +11,11 @@ const Cta = ({ darkMode, setDarkMode }) => {
       ease: "back",
     });
   });
-  const mobileBG = darkMode
-    ? "../public/dark-bg-intro-mobile.svg"
-    : "../public/bg-intro-mobile.svg";
-
-  const desktopBG = darkMode
-    ? "../public/dark-bg-intro-desktop.svg"
-    : "../public/bg-intro-desktop.svg";
 
   return (
     <section className="cta overflow-hidden flex flex-col items-center lg:flex-row-reverse  md:space-x-6">
       <div
-        className={`bg-[url(${mobileBG})] bg-no-repeat -mr-10  bg-[length:100%] lg:bg-[length:130%] lg:bg-[url(${desktopBG})] lg:bg-[position:top_150%_right_85%]`}
+        className={`image-bg bg-[url(../public/bg-intro-mobile.svg)] bg-no-repeat -mr-10  bg-[length:100%] lg:bg-[length:130%] lg:bg-[url(../public/bg-intro-desktop.svg)] lg:bg-[position:top_150%_right_85%]`}
       >
         <img
           className="-mt-40 drop-shadow-2xl pb-10 md:pl-40 md:-mt-20"
