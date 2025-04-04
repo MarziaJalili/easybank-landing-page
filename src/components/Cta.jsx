@@ -1,4 +1,5 @@
 import RequestButton from "./RequestButton";
+import ToggleButton from "./ToggleButton";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -12,6 +13,7 @@ const Cta = () => {
   });
   return (
     <section className="cta relative overflow-hidden flex flex-col items-center lg:flex-row-reverse  md:space-x-6">
+      <ToggleButton />
       <div className="bg-[url(../public/bg-intro-mobile.svg)] bg-no-repeat -mr-10  bg-[length:100%] lg:bg-[length:130%] lg:bg-[url(../public/bg-intro-desktop.svg)] lg:bg-[position:top_150%_right_85%]">
         <img
           className="-mt-40 drop-shadow-2xl pb-10 md:pl-40 md:-mt-20"

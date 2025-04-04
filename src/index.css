@@ -37,7 +37,6 @@ body.overlay::after {
   transition: all 0.25s;
   span {
     transition: all 0.5s;
-    background-color: rgb(243, 244, 246);
   }
 }
 .hamburger-bottom {

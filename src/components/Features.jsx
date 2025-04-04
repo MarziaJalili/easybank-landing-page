@@ -39,20 +39,14 @@ const Features = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.to(".one", {
-      scrollTrigger: {
-        trigger: ".one",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: ".one",
       y: 0,
       duration: 2,
       ease: "elastic",
     });
 
     gsap.to(".two", {
-      scrollTrigger: {
-        trigger: ".two",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: ".two",
       y: 0,
       delay: 0.2,
       duration: 2,
@@ -60,10 +54,7 @@ const Features = () => {
     });
 
     gsap.to(".three", {
-      scrollTrigger: {
-        trigger: ".three",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: ".three",
       y: 0,
       delay: 0.4,
       duration: 2,
@@ -71,10 +62,7 @@ const Features = () => {
     });
 
     gsap.to(".four", {
-      scrollTrigger: {
-        trigger: ".four",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: ".four",
       y: 0,
       delay: 0.6,
       duration: 2,
@@ -82,10 +70,7 @@ const Features = () => {
     });
 
     gsap.to(".-translate-x-full", {
-      scrollTrigger: {
-        trigger: ".-translate-x-full",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: ".-translate-x-full",
       x: 0,
       duration: 1,
       ease: "in",

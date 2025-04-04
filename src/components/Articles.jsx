@@ -44,20 +44,14 @@ const Features = () => {
 
     // the "a" after the class names stands for articles...
     gsap.to(".onea", {
-      scrollTrigger: {
-        trigger: ".onea",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: ".onea",
       x: 0,
       duration: 1,
       ease: "in",
     });
 
     gsap.to(".twoa", {
-      scrollTrigger: {
-        trigger: ".twoa",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: ".twoa",
       x: 0,
       delay: 0.2,
       duration: 1,
@@ -65,10 +59,7 @@ const Features = () => {
     });
 
     gsap.to(".threea", {
-      scrollTrigger: {
-        trigger: ".threea",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: ".threea",
       x: 0,
       delay: 0.4,
       duration: 1,
@@ -76,10 +67,7 @@ const Features = () => {
     });
 
     gsap.to(".foura", {
-      scrollTrigger: {
-        trigger: ".foura",
-        toggleActions: "restart none none none",
-      },
+      scrollTrigger: ".foura",
       x: 0,
       delay: 0.6,
       duration: 1,
