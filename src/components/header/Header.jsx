@@ -2,7 +2,7 @@ import RequestButton from "../RequestButton";
 import Nav from "./Nav";
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({ darkMode }) => {
   const [isMenuShown, setIsMenuShown] = useState(false);
   // toggle the menu button
   const handleClick = () => {
@@ -24,9 +24,13 @@ const Header = () => {
   };
   console.log(document.body);
   return (
-    <header className="relative z-1 md:py-3 p-6 flex items-center justify-between bg-white drop-shadow-xs lg:px-20 xl:px-40">
+    <header className="fixed w-full z-1 md:py-4 p-6 flex items-center justify-between bg-white drop-shadow-xs lg:px-20 xl:px-40">
       {/* logo image */}
-      <img className="max-md:w-[120px]" src="./logo.svg" alt="logo image" />
+      <img
+        className="max-md:w-[120px]"
+        src={darkMode ? "./light-logo.svg" : "./logo.svg"}
+        alt="logo image"
+      />
       <Nav isMenuShown={isMenuShown} />
 
       {/* Hamburger Icon */}
@@ -42,7 +46,13 @@ const Header = () => {
       </button>
 
       {/* Request Invite button */}
-      <RequestButton show={"hidden md:block"} />
+      <RequestButton
+        show={`hidden md:block ${
+          darkMode
+            ? "hover:brightness-120 hover:opacity-100 hover:shadow-[0_0_30px_hsla(136,65%,51%,1)]"
+            : ""
+        }`}
+      />
     </header>
   );
 };

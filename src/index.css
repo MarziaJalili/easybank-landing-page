@@ -5,6 +5,11 @@
   font-family: "Public Sans", sans-serif;
 }
 
+body {
+  /* making toggling the mode smoother... */
+  transition: 1s;
+}
+
 @theme {
   /* ## Colors */
 
@@ -80,5 +85,55 @@ body.overlay::after {
 @keyframes fade-nav {
   to {
     transform: translateX(105%);
+  }
+}
+
+/* addeing transition to the request invite button */
+.invite-btn {
+  transition: filter 0.3s ease, opacity 0.3s ease, box-shadow 0.5s ease;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* dark mode */
+body.dark {
+  background-color: #03181b;
+  &.overlay::after {
+    background-color: #032727;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #d1fab6;
+  }
+
+  .features {
+    background-color: transparent;
+  }
+
+  .articles {
+    li {
+      background-color: #042021;
+      box-shadow: 0 0 35px #111;
+    }
+  }
+
+  header,
+  footer,
+  #menu {
+    background-color: #032727;
+    a {
+      color: var(--color-Very-Light-Gray);
+    }
+    a:not(.invite-btn):hover {
+      color: #d1fab6;
+    }
+
+    svg:hover {
+      fill: #d1fab6;
+    }
   }
 }

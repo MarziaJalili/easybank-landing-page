@@ -83,7 +83,7 @@ const Features = () => {
     >
       <img
         className={`rounded-tr-md rounded-tl-md ${
-          index === 0 ? "max-h-[194px]" : ""
+          index === 0 ? "lg:max-h-[194px]" : ""
         } `}
         src={item.img}
         alt="feature image"
@@ -97,7 +97,7 @@ const Features = () => {
   ));
 
   return (
-    <section className="features flex flex-col  items-center space-y-6 px-6 py-20 lg:items-start md:px-40 ">
+    <section className="articles flex flex-col  items-center space-y-6 px-6 py-20 lg:items-start md:px-40 ">
       <h2 className="onea -translate-x-full text-Dark-Blue mb-10 text-3xl font-light md:text-4xl ">
         Latest Articles
       </h2>

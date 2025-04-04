@@ -68,7 +68,11 @@ const Footer = () => {
         </li>
       </ul>
       <div className="flex flex-col items-center space-y-8 md:items-end">
-        <RequestButton show={"px-10 hover:brightness-120 hover:opacity-100"} />
+        <RequestButton
+          show={
+            "px-10 hover:brightness-120 hover:opacity-100 hover:shadow-[0_0_30px_hsla(136,65%,51%,1)]"
+          }
+        />
         <span className="text-Grayish-Blue text-sm">
           &copy; Easybank. All Rights Reserved
         </span>
