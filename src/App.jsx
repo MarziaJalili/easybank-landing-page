@@ -4,14 +4,7 @@ import Features from "./components/Features";
 import Articles from "./components/Articles";
 import Footer from "./components/footer/Footer";
 
-// importing gsap
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-
 import { useState } from "react";
-useGSAP(() => {
-  gsap.to();
-});
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
