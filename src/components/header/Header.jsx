@@ -24,7 +24,7 @@ const Header = ({ darkMode }) => {
   };
   console.log(document.body);
   return (
-    <header className="fixed w-full z-1 md:py-4 p-6 flex items-center justify-between bg-white drop-shadow-xs lg:px-20 xl:px-40">
+    <header className="fixed w-full z-1 md:py-4 p-6 flex items-center justify-between bg-white drop-shadow-xs max-lg:pr-8 lg:px-20 xl:px-40">
       {/* logo image */}
       <img
         className="max-md:w-[120px]"

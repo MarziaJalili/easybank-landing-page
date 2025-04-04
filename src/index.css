@@ -1,15 +1,5 @@
 @import "tailwindcss";
 
-/* add the font */
-* {
-  font-family: "Public Sans", sans-serif;
-}
-
-body {
-  /* making toggling the mode smoother... */
-  transition: 1s;
-}
-
 @theme {
   /* ## Colors */
 
@@ -26,12 +16,33 @@ body {
   --color-Very-Light-Gray: hsl(0, 0%, 98%);
 }
 
+/* add the font */
+* {
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  /* making toggling the mode smoother... */
+  transition: 1s;
+}
+
+/* changing the selection color... */
+::selection {
+  background-color: #ffecbc;
+  color: var(--color-Dark-Blue);
+}
+
+::-moz-selection {
+  background-color: #ffecbc;
+  color: var(--color-Dark-Blue);
+}
+
 /* fading out the page when them MobileNav is rendered and vis versa... */
 body.overlay::after {
   content: "";
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #8489a8;
   opacity: 0.7;
   inset: 0;
@@ -93,8 +104,43 @@ body.overlay::after {
   transition: filter 0.3s ease, opacity 0.3s ease, box-shadow 0.5s ease;
 }
 
+/* scroll bar animation... */
 ::-webkit-scrollbar {
   width: 0;
+}
+
+.progress-bar {
+  animation: progress 5s linear infinite;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to top,
+      var(--color-Lime-Green),
+      var(--color-Bright-Cyan)
+    );
+    filter: blur(15px);
+  }
+}
+
+&::after {
+  filter: blue(35px);
+}
+
+@keyframes progress {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(365deg);
+  }
 }
 
 /* dark mode */
@@ -102,6 +148,14 @@ body.dark {
   background-color: #03181b;
   &.overlay::after {
     background-color: #032727;
+  }
+
+  ::selection {
+    background-color: #d1fab6;
+  }
+
+  ::-moz-selection {
+    background-color: #d1fab6;
   }
 
   h1,
