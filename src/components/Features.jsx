@@ -81,7 +81,7 @@ const Features = () => {
   const features = featureData.map((item, index) => (
     <li
       key={item.heading}
-      className={`translate-y-full flex flex-col space-y-6 items-center lg:items-start md:max-w-sm lg:w-[280px] shrink-0 ${item.id}`}
+      className={`translate-y-full flex flex-col space-y-6 items-center lg:items-start md:max-w-sm lg:w-[270px] shrink-0 ${item.id}`}
     >
       <img src={item.img} alt="feature image" aria-hidden="true" />
       <h3 className="text-Dark-Blue text-2xl font-light xl:text-3xl">
@@ -94,7 +94,7 @@ const Features = () => {
   ));
 
   return (
-    <section className="features bg-Light-Grayish-Blue flex flex-col  text-center items-center space-y-6 px-6 py-20 mt-20 lg:items-start lg:text-left lg:px-40 lg:py-30 md:mt-0 ">
+    <section className="features bg-Light-Grayish-Blue flex flex-col  text-center items-center space-y-6 px-6 py-20 mt-20 lg:items-start lg:text-left lg:px-30 lg:py-30 md:mt-0 ">
       <div className="flex flex-col space-y-6 md:max-w-xl">
         <h2 className="text-Dark-Blue text-3xl font-light md:text-4xl -translate-x-full">
           Why choose Easybank?
@@ -105,7 +105,7 @@ const Features = () => {
         </p>
       </div>
 
-      <ul className="flex  w-full flex-col space-y-15 lg:flex-row items-center xl:space-y-0  lg:justify-between lg:items-start lg:flex-wrap">
+      <ul className="flex  w-full flex-col space-y-15 lg:flex-row items-center xl:space-y-0  lg:justify-between lg:items-start lg:space-x-6 lg:overflow-auto">
         {features}
       </ul>
     </section>

@@ -79,7 +79,7 @@ const Features = () => {
   const articles = articleData.map((item, index) => (
     <li
       key={item.heading}
-      className={`-translate-x-full ${item.id}a flex min-h-[517px] flex-col md:w-[290px] shrink-0 shadow-[0_35px_35px_rgba(243,244,246,1)] rounded-md`}
+      className={`-translate-x-full ${item.id}a flex min-h-[517px] flex-col lg:w-[270px] shrink-0 shadow-[0_35px_35px_rgba(243,244,246,1)] rounded-md`}
     >
       <img
         className={`rounded-tr-md rounded-tl-md ${
@@ -97,12 +97,12 @@ const Features = () => {
   ));
 
   return (
-    <section className="articles flex flex-col  items-center space-y-6 px-6 py-20 lg:items-start md:px-40 ">
+    <section className="articles flex flex-col  items-center space-y-6 px-6 py-20 lg:items-start md:px-30 ">
       <h2 className="onea -translate-x-full text-Dark-Blue mb-10 text-3xl font-light md:text-4xl ">
         Latest Articles
       </h2>
 
-      <ul className="flex w-full flex-col space-y-15 lg:flex-row items-center xl:space-y-10  lg:justify-between lg:items-start lg:flex-wrap">
+      <ul className="flex w-full flex-col space-y-15 lg:flex-row items-center xl:space-y-10  lg:justify-between lg:items-start overflow-auto lg:space-x-6">
         {articles}
       </ul>
     </section>
