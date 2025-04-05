@@ -94,21 +94,23 @@ const Features = () => {
   ));
 
   return (
-    <section className="features bg-Light-Grayish-Blue flex flex-col  text-center items-center space-y-6 px-6 py-20 mt-20 lg:items-start lg:text-left lg:px-30 lg:py-30 md:mt-0 ">
-      <div className="flex flex-col space-y-6 md:max-w-xl">
-        <h2 className="text-Dark-Blue text-3xl font-light md:text-4xl -translate-x-full">
-          Why choose Easybank?
-        </h2>
-        <p className="text-Grayish-Blue mb-10 md:text-lg -translate-x-full">
-          We leverage Open Banking to turn your bank account into your financial
-          hub. Control your finances like never before.
-        </p>
-      </div>
+    <div className="bg-Light-Grayish-Blue">
+      <section className="features bg-Light-Grayish-Blue flex flex-col  text-center items-center space-y-6 px-6 py-20 mt-20 lg:items-start lg:text-left lg:px-30 lg:py-30 md:mt-0 xl:container xl:mx-auto w-full">
+        <div className="flex flex-col space-y-6 md:max-w-xl">
+          <h2 className="text-Dark-Blue text-3xl font-light md:text-4xl -translate-x-full">
+            Why choose Easybank?
+          </h2>
+          <p className="text-Grayish-Blue mb-10 md:text-lg -translate-x-full">
+            We leverage Open Banking to turn your bank account into your
+            financial hub. Control your finances like never before.
+          </p>
+        </div>
 
-      <ul className="flex  w-full flex-col space-y-15 lg:flex-row items-center xl:space-y-0  lg:justify-between lg:items-start lg:space-x-6 lg:overflow-auto">
-        {features}
-      </ul>
-    </section>
+        <ul className="flex  w-full flex-col space-y-15 lg:flex-row items-center xl:space-y-0  lg:justify-between lg:items-start lg:space-x-6 lg:overflow-auto">
+          {features}
+        </ul>
+      </section>
+    </div>
   );
 };
 
