@@ -94,7 +94,7 @@ const Features = () => {
   ));
 
   return (
-    <div className="bg-Light-Grayish-Blue">
+    <div className="features bg-Light-Grayish-Blue">
       <section className="features bg-Light-Grayish-Blue flex flex-col  text-center items-center space-y-6 px-6 py-20 mt-20 lg:items-start lg:text-left lg:px-30 lg:py-30 md:mt-0 xl:container xl:mx-auto w-full">
         <div className="flex flex-col space-y-6 md:max-w-xl">
           <h2 className="text-Dark-Blue text-3xl font-light md:text-4xl -translate-x-full">
